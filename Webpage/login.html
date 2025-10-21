@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Login</h1>
+    <nav class="navbar">
+             <ul class="menu">
+                <li><a href="Home.html">Home</a></li>
+             </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form class="contact-form" onsubmit="return loginUser()">
+      <label>UserName</label>
+      <input type="text" id ="username" placeholder="Enter Username" required>
+
+      <label>Password </label>
+      <input type="password" id ="password" placeholder=" Enter Password" required>
+
+      <button type="submit" class="register" >Login</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+
+
+   <script>
+    function loginUser() {
+      // Get input values
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+    
+      if (user === "admin" && pass === "1234") {
+        alert(" Login Successful");        
+        window.location.href = "Home.html";  
+      } else {
+        alert( " Invalid username or password");  
+      }
+
+      return false;
+    }
+    </script>
+</body>
+</html>
